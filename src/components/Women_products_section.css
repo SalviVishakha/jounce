@@ -1,0 +1,363 @@
+.women-product-section {
+  padding: 50px 70px;
+  background: #fafafa;
+}
+
+.women-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.women-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.img-box {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale .4s ease;
+}
+
+.product-card:hover img {
+  scale: 1.08;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.brand {
+  color: #777;
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+
+.name {
+  font-size: 18px;
+  margin: 4px 0 8px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.rating {
+  margin: 6px 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.star {
+  color: rgb(220, 179, 31);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .women-product-section {
+    padding: 35px 20px;
+  }
+  
+  .women-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .women-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .img-box {
+    height: 220px;
+  }
+  
+  .name {
+    font-size: 15px;
+    height: 40px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+  .women-product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .img-box {
+    height: 200px;
+  }
+  
+  .name {
+    font-size: 13px;
+    height: 34px;
+  }
+  
+  .price {
+    font-size: 15px;
+  }
+  
+  .old-price {
+    font-size: 11px;
+  }
+}
+
+/* Landscape Mode for Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .women-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
+  .img-box {
+    height: 150px;
+  }
+  
+  .name {
+    font-size: 12px;
+    height: 32px;
+  }
+  
+  .btn {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
+
+/* ==================== */
+/* MOBILE RESPONSIVE CSS */
+/* ==================== */
+
+@media (max-width: 768px) {
+  .women-product-section {
+    padding: 30px 16px !important;
+  }
+  
+  .women-title {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+  }
+  
+  .women-product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  .product-card {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+  }
+  
+  .img-box {
+    height: 180px !important;
+  }
+  
+  .img-box img {
+    transition: transform 0.4s ease !important;
+  }
+  
+  .product-card:hover img {
+    transform: scale(1.05) !important;
+  }
+  
+  .product-info {
+    padding: 12px !important;
+  }
+  
+  .brand {
+    font-size: 11px !important;
+    letter-spacing: .3px !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .name {
+    font-size: 14px !important;
+    margin: 0 0 6px !important;
+    line-height: 1.3 !important;
+    height: 36px !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    /* -webkit-line-clamp: 2 !important; */
+    -webkit-box-orient: vertical !important;
+  }
+  
+  .price-row {
+    gap: 8px !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .price {
+    font-size: 16px !important;
+  }
+  
+  .old-price {
+    font-size: 12px !important;
+    color: #999 !important;
+  }
+  
+  .rating {
+    margin: 4px 0 8px !important;
+    gap: 4px !important;
+  }
+  
+  .star {
+    font-size: 14px !important;
+  }
+  
+  .rating span {
+    font-size: 13px !important;
+  }
+  
+  .btn {
+    padding: 8px !important;
+    border-radius: 25px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+  .women-product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+  }
+  
+  .img-box {
+    height: 200px !important;
+  }
+  
+  .name {
+    font-size: 13px !important;
+    height: 34px !important;
+  }
+  
+  .price {
+    font-size: 15px !important;
+  }
+  
+  .old-price {
+    font-size: 11px !important;
+  }
+}
+
+/* Tablet View (768px and below but above 480px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .women-product-section {
+    padding: 35px 20px !important;
+  }
+  
+  .women-title {
+    font-size: 28px !important;
+    margin-bottom: 25px !important;
+  }
+  
+  .women-product-grid {
+    gap: 20px !important;
+  }
+  
+  .img-box {
+    height: 220px !important;
+  }
+  
+  .name {
+    font-size: 15px !important;
+    height: 40px !important;
+  }
+  
+  .price {
+    font-size: 18px !important;
+  }
+  
+  .btn {
+    padding: 10px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Landscape Mode for Mobile Phones */
+@media (max-width: 768px) and (max-height: 500px) and (orientation: landscape) {
+  .women-product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .img-box {
+    height: 150px !important;
+  }
+  
+  .name {
+    font-size: 12px !important;
+    height: 32px !important;
+  }
+  
+  .btn {
+    padding: 6px !important;
+    font-size: 12px !important;
+  }
+}

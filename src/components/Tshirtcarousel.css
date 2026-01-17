@@ -1,0 +1,127 @@
+.tshirt-carousel {
+  width: 100%;
+  max-width: 1300px;
+  margin: 2.5rem auto;
+ 
+}
+
+/* Each slide wrapper (slick places your slide inside its own div) */
+.slick-slide > .tshirt-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Card design */
+.tshirt-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 360px;   /* card width inside carousel */
+  height: 460px;  /* card height */
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  background: #000;
+}
+
+/* Image */
+.tshirt-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.tshirt-card:hover .tshirt-img {
+  transform: scale(1.05);
+}
+
+/* Overlay + frame + text */
+.tshirt-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.tshirt-frame {
+  position: absolute;
+  inset: 12px;
+  border: 3px solid rgba(255,255,255,0.95);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.tshirt-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.tshirt-text p {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.tshirt-text h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Soft gradient to improve readability */
+.tshirt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.06), rgba(0,0,0,0.4));
+  z-index: 0;
+}
+
+/* Slick dots colors */
+.slick-dots li button:before {
+  color: #333;
+  opacity: 0.45;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* Optional: override slick arrow styles a bit */
+.slick-prev, .slick-next {
+  z-index: 5;
+  top: 45%;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.9;
+}
+/* Add gap between slides */
+.slick-slide {
+  padding: 0 10px; /* horizontal gap between slides */
+}
+
+/* Remove extra space at the edges */
+.tshirt-carousel .slick-list {
+  margin: 0 -10px; /* compensate for slide padding */
+  overflow: hidden;
+}
+.carousel-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111; /* you can change the color */
+  letter-spacing: 1px;
+}

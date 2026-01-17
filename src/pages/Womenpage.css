@@ -1,0 +1,217 @@
+/* =========================
+   WOMEN PAGE – EDITORIAL STYLE
+========================= */
+.women {
+  background-color: #ffffff;
+  font-family: "Playfair Display", "Poppins", sans-serif;
+}
+
+/* =========================
+   CAROUSEL WRAPPER
+========================= */
+.carousel-containers {
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 32px;
+}
+
+/* =========================
+   CARD – MINIMAL
+========================= */
+.carousel-card img{
+  /* padding: 18px; */
+  margin-right: 20px;
+}
+
+/* =========================
+   IMAGE – EDITORIAL FEEL
+========================= */
+.carousel-card img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.6s ease;
+}
+
+/* subtle zoom only */
+.carousel-card:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================
+   SLICK DOTS – LINE STYLE
+========================= */
+.slick-dots {
+  bottom: -31px;
+}
+
+.slick-dots li {
+  width: 28px;
+}
+
+.slick-dots li button:before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: #000;
+}
+
+/* =========================
+   ARROWS – DESKTOP
+========================= */
+.slick-prev,
+.slick-next {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #000;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+  font-size: 18px;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #fff;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .carousel-containers {
+    padding: 0 24px;
+  }
+
+  .carousel-card {
+    padding: 14px;
+  }
+
+  .carousel-card img {
+    height: 420px;
+    border-radius: 12px;
+  }
+
+  .slick-prev {
+    left: -10px;
+  }
+
+  .slick-next {
+    right: -10px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .carousel-containers {
+    padding: 0 16px;
+  }
+
+  .carousel-card {
+    padding: 10px;
+  }
+
+  .carousel-card img {
+    height: 320px;
+    border-radius: 10px;
+  }
+
+  /* Hide arrows on mobile */
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: -30px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .carousel-card img {
+    height: 240px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .carousel-containers {
+    padding: 0 10px;
+  }
+
+  .carousel-card {
+    padding: 0;           /* remove inner extra gap */
+  }
+
+  .carousel-card img {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Hide arrows on mobile */
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
+  /* dots closer */
+  .slick-dots {
+    bottom: -31px;
+  }
+
+  /* smaller dots line */
+  .slick-dots li button:before {
+    width: 18px;
+    height: 2px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .carousel-containers {
+    padding: 0 6px;
+  }
+
+  .carousel-card img {
+    height: 230px;
+    border-radius: 8px;
+  }
+
+  .slick-dots {
+    bottom: -31px;
+  }
+}

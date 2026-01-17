@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Button */
+.pdf-btn {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+}
+
+.pdf-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Overlay */
+.size-guide-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Modal */
+.size-guide-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Title */
+.sizeguide-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Unit toggle */
+.unit-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.unit-toggle span {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.unit-toggle .active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Table */
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.size-table th,
+.size-table td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 0.85rem;
+}
+
+.size-table th {
+  font-weight: bold;
+}
+
+/* Note */
+.note {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
+
+/* Diagram */
+.diagram {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.diagram img {
+  width: 100%;
+  max-width: 260px;
+}
+
+/* Instructions */
+.instructions h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.instructions ul {
+  padding-left: 1.2rem;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.instructions li {
+  margin-bottom: 0.3rem;
+}
+
+/* RIGHT DRAWER */
+.size-guide-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 420px;
+  max-width: 100%;
+  background: white;
+  padding: 1.5rem;
+  overflow-y: auto;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  animation: slideIn .4s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Make overlay full screen & clickable */
+.size-guide-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 9999;
+}
