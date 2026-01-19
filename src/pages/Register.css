@@ -301,3 +301,33 @@
     font-size: 16px !important;
   }
 }
+
+/* Mobile back button */
+.mobile-back-btn {
+  display: none; /* hidden by default on desktop */
+  position: sticky; /* sticks at top when scrolling */
+  top: 10px;
+  left: 16px;
+  font-size: 16px;
+  color: #111;
+  cursor: pointer;
+  z-index: 1000; /* make sure it’s above other elements */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff; /* optional: white background */
+  padding: 6px 12px;
+  border-radius: 6px;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.2); */
+}
+
+.mobile-back-btn:hover {
+  color: #ee1b25;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-back-btn {
+    display: flex;
+  }
+}

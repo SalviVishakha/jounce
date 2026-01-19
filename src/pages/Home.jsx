@@ -204,14 +204,7 @@ const Home = () => {
       </section>
 
       {/* scroll button  */}
-      {showScrollTop && (
-        <button
-          className="scroll-top-btn"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <FaArrowUp />
-        </button>
-      )}
+      {showScrollTop && <button className="scroll-toop-btn" onCl></button>}
     </div>
   );
 };
