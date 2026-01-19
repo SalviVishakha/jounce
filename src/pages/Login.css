@@ -215,3 +215,27 @@
     font-size: 15px;
   }
 }
+
+
+/* Back button only visible on mobile */
+.mobile-back-btn {
+  display: none;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+  margin: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-back-btn:hover {
+  color: #ee1b25;
+}
+
+/* Show on screens <= 768px */
+@media (max-width: 768px) {
+  .mobile-back-btn {
+    display: flex;
+  }
+}

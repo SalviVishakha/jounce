@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
@@ -9,6 +10,7 @@ import Women from "../components/Women";
 import Four_side from "../components/Four_side";
 import Women_category from "../components/Women_category";
 import Women_products_section from "../components/Women_products_section";
+import { FaArrowUp } from "react-icons/fa";
 
 // Images
 import women1 from "../assets/women1.jpg";
@@ -32,6 +34,16 @@ const Womenpage = () => {
       { breakpoint: 700, settings: { slidesToShow: 1 } },
     ],
   };
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const images = [women1, women2, women3, women4];
   return (
@@ -59,6 +71,16 @@ const Womenpage = () => {
       <Four_side />
       <Women_category />
       <Women_products_section />
+
+      {/* scroll button  */}
+      {showScrollTop && (
+        <button
+          className="scroll-top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <FaArrowUp />
+        </button>
+      )}
     </div>
   );
 };
