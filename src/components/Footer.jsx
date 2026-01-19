@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Support</h4>
           <ul>
-            <li>Size Guide</li>
+            {/* <li>Size Guide</li> */}
             <Link
               to="/return-policy"
               style={{ color: "white", textDecoration: "none" }}

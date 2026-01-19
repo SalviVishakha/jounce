@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaStar } from "react-icons/fa";
@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { FaArrowUp } from "react-icons/fa";
 
 import "./Home.css";
 
@@ -53,6 +54,16 @@ const Home = () => {
       { breakpoint: 700, settings: { slidesToShow: 1 } },
     ],
   };
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const images = [banner1, banner2, banner3, banner4, banner5, banner6];
 
@@ -191,6 +202,16 @@ const Home = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* scroll button  */}
+      {showScrollTop && (
+        <button
+          className="scroll-top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <FaArrowUp />
+        </button>
+      )}
     </div>
   );
 };
