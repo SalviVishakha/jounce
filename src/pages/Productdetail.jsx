@@ -92,7 +92,7 @@ const ProductDetailPremium = () => {
   const handleAddToCart = () => {
     // In real app, this would dispatch to Redux/Context or make API call
     console.log(
-      `Added ${quantity} x ${product.title} (${selectedSize}) to cart`
+      `Added ${quantity} x ${product.title} (${selectedSize}) to cart`,
     );
     alert(`${product.title} added to cart!`);
   };
@@ -366,14 +366,14 @@ const ProductDetailPremium = () => {
                   confetti({
                     particleCount: 60,
                     spread: 70,
-                    startVelocity: 25,
+                    startVelocity: 15,
                     origin: {
                       x: (rect.left + rect.width / 2) / window.innerWidth,
                       y: (rect.top + rect.height / 2) / window.innerHeight,
                     },
                   });
                 } else {
-                  navigate("/cart");
+                  navigate("/add-to-cart");
                 }
               }}
             >
