@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Categorybar from "./components/Categorybar";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -37,6 +38,7 @@ function App() {
       {showSite && (
         <>
           <Header />
+          <Categorybar />
           <ScrollToTop />
 
           <Routes>
