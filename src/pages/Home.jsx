@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { FaArrowUp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -195,7 +196,9 @@ const Home = () => {
                     <span className="original">₹1099</span>
                     <span className="discount">60% OFF</span>
                   </div>
-                  <button className="add-to-cart-btn">Add to Cart</button>
+                  <Link to="/add-to-cart" className="add-to-cart-btn">
+                    Add to Cart
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -204,7 +207,15 @@ const Home = () => {
       </section>
 
       {/* scroll button  */}
-      {showScrollTop && <button className="scroll-toop-btn" onCl></button>}
+      {/* scroll button  */}
+      {showScrollTop && (
+        <button
+          className="scroll-top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <FaArrowUp />
+        </button>
+      )}
     </div>
   );
 };

@@ -15,7 +15,9 @@
 }
 
 .logo {
-  height: 45px;
+  height: 56px;
+  max-height: 60px;
+  object-fit: contain;
 }
 
 /* CENTER */
@@ -246,7 +248,7 @@
   }
   
   .logo {
-    height: 40px;
+    height: 50px;
   }
 }
 
@@ -305,7 +307,7 @@
   }
 
   .logo {
-    height: 36px;
+    height: 46px;
   }
 }
 

@@ -450,48 +450,122 @@ const ProductDetailPremium = () => {
           </div>
 
           {/* Reviews Section */}
-          <div className="review-box">
-            <h2 className="review-title">Customer Reviews</h2>
+          {/* ================= REVIEWS SECTION ================= */}
+          <div className="reviews-premium">
+            <h2 className="reviews-title">Customer Reviews</h2>
 
-            {/* Rating Filter */}
-            <div className="filter-row">
-              <span>Filter by Rating:</span>
-              {[0, 5, 4, 3, 2, 1].map((r) => (
-                <button
-                  key={r}
-                  className={`filter-btn ${
-                    selectedRating === r ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedRating(r)}
-                >
-                  {r === 0 ? "All" : `${r} ⭐`}
-                </button>
-              ))}
+            {/* ----- Rating Summary ----- */}
+            <div className="rating-summary-box">
+              <div className="rating-left">
+                <div className="rating-score">{product.rating}</div>
+                <div className="rating-stars">{renderStars()}</div>
+                <p className="rating-count">
+                  {product.reviewCount} global ratings
+                </p>
+              </div>
+
+              <div className="rating-right">
+                {[5, 4, 3, 2, 1].map((star) => (
+                  <div className="rating-bar-row" key={star}>
+                    <span>{star}★</span>
+                    <div className="rating-bar">
+                      <div
+                        className="rating-bar-fill"
+                        style={{
+                          width:
+                            star === 5
+                              ? "62%"
+                              : star === 4
+                                ? "22%"
+                                : star === 3
+                                  ? "9%"
+                                  : star === 2
+                                    ? "4%"
+                                    : "3%",
+                        }}
+                      ></div>
+                    </div>
+                    <span className="rating-percent">
+                      {star === 5
+                        ? "62%"
+                        : star === 4
+                          ? "22%"
+                          : star === 3
+                            ? "9%"
+                            : star === 2
+                              ? "4%"
+                              : "3%"}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Reviews List */}
-            <div className="review-list">
+            {/* ----- Review Controls ----- */}
+            <div className="review-controls">
+              <div className="filter-row">
+                <span>Filter:</span>
+                {[0, 5, 4, 3, 2, 1].map((r) => (
+                  <button
+                    key={r}
+                    className={`filter-btn ${selectedRating === r ? "active" : ""}`}
+                    onClick={() => setSelectedRating(r)}
+                  >
+                    {r === 0 ? "All" : `${r}★`}
+                  </button>
+                ))}
+              </div>
+
+              <div className="sort-box">
+                <span>Sort by:</span>
+                <select>
+                  <option>Most Relevant</option>
+                  <option>Most Recent</option>
+                  <option>Highest Rated</option>
+                  <option>Lowest Rated</option>
+                </select>
+              </div>
+            </div>
+
+            {/* ----- Reviews List ----- */}
+            <div className="review-list-premium">
               {(selectedRating === 0
                 ? reviews
                 : reviews.filter((r) => r.rating === selectedRating)
               ).map((r, index) => (
-                <div className="review-card" key={index}>
-                  <div className="review-header">
-                    <h4>{r.name}</h4>
-                    <div className="stars">
+                <div className="review-card-premium" key={index}>
+                  <div className="review-header-premium">
+                    <div className="review-user">
+                      <div className="avatar-circle">{r.name.charAt(0)}</div>
+                      <div>
+                        <strong>{r.name}</strong>
+                        <span className="verified-badge">
+                          Verified Purchase
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="review-stars">
                       {[...Array(r.rating)].map((_, i) => (
                         <span key={i}>⭐</span>
                       ))}
                     </div>
                   </div>
-                  <p className="review-text">{r.comment}</p>
+
+                  <p className="review-text-premium">{r.comment}</p>
+
+                  <div className="review-footer">
+                    <span>Was this helpful?</span>
+                    <button>👍 Yes</button>
+                    <button>👎 No</button>
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* Add Review */}
-            <div className="add-review">
-              <h4>Write a Review</h4>
+            {/* ----- Write Review Box ----- */}
+            <div className="write-review-box">
+              <h3>Write a Review</h3>
 
               <div className="rating-select">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -500,19 +574,19 @@ const ProductDetailPremium = () => {
                     className={`rate-star ${newRating >= star ? "active" : ""}`}
                     onClick={() => setNewRating(star)}
                   >
-                    ⭐
+                    ★
                   </span>
                 ))}
               </div>
 
               <textarea
-                placeholder="Share your experience..."
+                placeholder="Share your experience with this product..."
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}
               />
 
               <button
-                className="submit-btn"
+                className="submit-review-btn"
                 onClick={() => {
                   if (!newRating || !newComment) return;
                   setReviews([

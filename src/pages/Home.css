@@ -836,7 +836,10 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   }
 }
 
-.add-to-cart-btn{
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin-top: 10px;
   padding: 8px 10px;
@@ -847,17 +850,19 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;   /* removes underline */
   transition: background 0.25s ease, transform 0.15s ease;
 }
 
-.add-to-cart-btn:hover{
+.add-to-cart-btn:hover {
   background: #222;
   transform: translateY(-1px);
 }
 
-.add-to-cart-btn:actibe{
+.add-to-cart-btn:active {
   transform: scale(0.98);
 }
+
 
 /* scroll-top-button */
 
