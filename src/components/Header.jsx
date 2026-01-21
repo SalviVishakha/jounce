@@ -377,7 +377,7 @@ function Header() {
             {/* ---------- BOTTOM NAV ---------- */}
             <nav className="mobile-nav">
               <Link
-                to="/"
+                to="/my-order"
                 className="mobile-nav-link"
                 onClick={handleLinkClick}
               >
