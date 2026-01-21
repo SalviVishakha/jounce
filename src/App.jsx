@@ -19,6 +19,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Categorybar from "./components/Categorybar";
+import Myorder from "./pages/Myorder";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -56,6 +57,7 @@ function App() {
             <Route path="/return-policy" element={<Return_policy />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/my-order" element={<Myorder />} />
           </Routes>
 
           <Footer />
