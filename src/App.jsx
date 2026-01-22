@@ -21,6 +21,8 @@ import { useEffect, useState } from "react";
 import Categorybar from "./components/Categorybar";
 import Myorder from "./pages/Myorder";
 import Tracking from "./pages/Tracking";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -60,6 +62,8 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/my-order" element={<Myorder />} />
             <Route path="/track-order" element={<Tracking />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
           </Routes>
 
           <Footer />
