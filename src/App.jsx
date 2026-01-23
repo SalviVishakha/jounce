@@ -24,6 +24,7 @@ import Tracking from "./pages/Tracking";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Account from "./pages/Account";
+import Notfound from "./pages/Notfound";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -66,6 +67,7 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/account" element={<Account />} />
+            <Route path="*" element={<Notfound />} />
           </Routes>
 
           <Footer />
