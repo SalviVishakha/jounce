@@ -1,0 +1,128 @@
+.account-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.account-header h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.account-header p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* Profile Card */
+.account-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-left{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.account-profile-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.account-profile-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Grid */
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.account-tile {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-tile span {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.account-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* Logout */
+.profile-logout-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111;
+  transition: all 0.2s ease;
+}
+
+.profile-logout-btn:hover {
+ background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.profile-logout-btn:active {
+  transform: scale(0.97);
+}
+
+.account-icon{
+    font-size: 20px;
+    color: #e91e63;
+}
+/* Mobile */
+@media (max-width: 640px) {
+  .account-page {
+    padding: 24px 16px;
+  }
+
+  .account-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

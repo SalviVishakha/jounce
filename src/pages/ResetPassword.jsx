@@ -7,7 +7,7 @@ const ResetPassword = () => {
     <div className="auth-page">
       <div className="auth-card">
         <h2>Reset Password</h2>
-        <p className="auth-subtext">Craete a new strong password</p>
+        <p className="auth-subtext">Create a new strong password</p>
         <form className="auth-form">
           <label>New Password</label>
           <input type="password" placeholder="Enter New Password" required />
