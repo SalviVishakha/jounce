@@ -23,6 +23,7 @@ import Myorder from "./pages/Myorder";
 import Tracking from "./pages/Tracking";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import Account from "./pages/Account";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -64,6 +65,7 @@ function App() {
             <Route path="/track-order" element={<Tracking />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
 
           <Footer />
