@@ -59,7 +59,7 @@
 }
 
 .notfound-btn.primary:hover{
-    background: #222;
+    background: #e91e63;
 }
 
 .notfound-btn.outline{
@@ -69,5 +69,5 @@
 }
 
 .notfound-btn.outline:hover{
-    background: #f5f5f5;
+    background: #e91e63;
 }
