@@ -51,7 +51,7 @@ const Wishlist = () => {
 
                 <button
                   onClick={() => removeItem(item.id)}
-                  className="remove-btn"
+                  className="remove-btns"
                 >
                   Remove
                 </button>

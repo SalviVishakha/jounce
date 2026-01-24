@@ -1,6 +1,7 @@
 import React from "react";
 import "./Tracking.css";
 import { FaCheckCircle, FaTruck, FaBoxOpen, FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import product1 from "../assets/shirt.jpg";
 
@@ -95,9 +96,11 @@ const TrackOrder = () => {
 
       {/* ---------- ACTIONS ---------- */}
       <div className="track-actions">
-        <button className="track-btn outline">
-          <FaTruck /> Contact Support
-        </button>
+        <Link to="/contact">
+          <button className="track-btn outline">
+            <FaTruck /> Contact Support
+          </button>
+        </Link>
         <button className="track-btn outline">
           <FaBoxOpen /> Download Invoice
         </button>

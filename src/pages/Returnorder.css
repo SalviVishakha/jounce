@@ -1,0 +1,214 @@
+.return-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.return-page h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ---------- CARD ---------- */
+.return-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* ---------- PRODUCT ---------- */
+.return-product {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.return-product img {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.return-product h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.return-product p {
+  margin: 4px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.price {
+  font-weight: 600;
+  color: #000;
+}
+
+/* ---------- FORM ---------- */
+.return-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.return-form label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.return-form select,
+.return-form textarea,
+.return-form input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* ---------- REFUND / REPLACE ---------- */
+.return-options {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.return-options button {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- ACTIVE ---------- */
+.return-options button.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ---------- UPLOAD ---------- */
+.upload-box {
+  width: 100%;
+}
+
+.upload-box input[type="file"] {
+  width: 100%;
+}
+
+/* ---------- PREVIEW ---------- */
+.upload-preview {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.preview-img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #f9f9f9;
+  flex-shrink: 0;
+}
+
+.preview-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-img span {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ---------- SUBMIT ---------- */
+.submit-return-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-return-btn:hover {
+  background: #222;
+}
+
+/* ================================================= */
+/* 🔥 MOBILE FIX */
+/* ================================================= */
+@media (max-width: 700px) {
+  .return-page {
+    padding: 20px 14px;
+  }
+
+  .return-page h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .return-card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .return-options {
+    flex-direction: column;
+  }
+
+  .return-options button {
+    padding: 12px;
+  }
+
+  .preview-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .submit-return-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
