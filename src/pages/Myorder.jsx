@@ -85,9 +85,11 @@ const MyOrders = () => {
                   <FaBoxOpen /> Invoice
                 </button>
 
-                <button className="order-btn danger">
-                  <FaRedoAlt /> Return
-                </button>
+                <Link to="/return-request">
+                  <button className="order-btn danger">
+                    <FaRedoAlt /> Return
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

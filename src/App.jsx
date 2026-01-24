@@ -25,6 +25,8 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Account from "./pages/Account";
 import Notfound from "./pages/Notfound";
+import Returnorder from "./pages/Returnorder";
+import Returnsuccess from "./pages/Returnsuccess";
 
 function App() {
   const [showSite, setShowSite] = useState(false);
@@ -68,6 +70,8 @@ function App() {
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/account" element={<Account />} />
             <Route path="*" element={<Notfound />} />
+            <Route path="/return-request" element={<Returnorder />} />
+            <Route path="/return-success" element={<Returnsuccess />} />
           </Routes>
 
           <Footer />
