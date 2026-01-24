@@ -89,35 +89,34 @@
 
 /* ================= BUTTONS ================= */
 .wishlist-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  justify-content: center;
   margin-top: 10px;
+}
+
+.wishlist-buttons button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .add-btn {
   background: #ffd43b;
-  padding: 8px 12px;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  color: #000;
 }
 
-.remove-btn {
+.remove-btns {
   background: #8b0000;
-  padding: 8px 12px;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+  color: #000;
 }
 
-.add-btn:hover {
-  background: #27ae60;
-}
-
-.remove-btn:hover {
+.remove-btns:hover {
   background: #8b0000;
 }
 
