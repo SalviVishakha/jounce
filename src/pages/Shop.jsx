@@ -310,11 +310,16 @@ const MensShop = () => {
 
         <div className="drawer-body">
           {/* Price */}
+
           <div className="filter-block">
-            <h4>Price</h4>
+            <div className="price-header">
+              <h4>Price</h4>
+              <span className="collapse-icon">—</span>
+            </div>
+
             <div className="dual-slider">
               <div
-                className="slider-tracks"
+                className="slider-track-active"
                 style={{
                   left: `${(minPrice / max) * 100}%`,
                   right: `${100 - (maxPrice / max) * 100}%`,
@@ -340,9 +345,9 @@ const MensShop = () => {
               />
             </div>
 
-            <div className="price-inputs">
-              <div>
-                ₹
+            <div className="price-inputs-modern">
+              <div className="price-box">
+                <span>₹</span>
                 <input
                   type="number"
                   value={minPrice}
@@ -351,9 +356,9 @@ const MensShop = () => {
                   }
                 />
               </div>
-              <span>To</span>
-              <div>
-                ₹
+              <span className="to-text">To</span>
+              <div className="price-box">
+                <span>₹</span>
                 <input
                   type="number"
                   value={maxPrice}

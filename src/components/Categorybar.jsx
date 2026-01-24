@@ -12,24 +12,24 @@ const CategoryBar = () => {
 
   const data = {
     new: [
-      { name: "Shirts", img: shirts, link: "/shirts" },
-      { name: "T-Shirts", img: tshirts, link: "/tshirts" },
-      { name: "Bottoms", img: bottoms, link: "/bottoms" },
-      { name: "Hoodies", img: hoodies, link: "/hoodies" },
+      { name: "Shirts", img: shirts, link: "/shop" },
+      { name: "T-Shirts", img: tshirts, link: "/shop" },
+      { name: "Bottoms", img: bottoms, link: "/shop" },
+      { name: "Hoodies", img: hoodies, link: "/shop" },
     ],
     tshirts: [
-      { name: "Oversized", img: tshirts, link: "/tshirts" },
-      { name: "Printed", img: tshirts, link: "/tshirts" },
-      { name: "Plain", img: tshirts, link: "/tshirts" },
+      { name: "Oversized", img: tshirts, link: "/shop" },
+      { name: "Printed", img: tshirts, link: "/shop" },
+      { name: "Plain", img: tshirts, link: "/shop" },
     ],
     bottoms: [
-      { name: "Jeans", img: bottoms, link: "/bottoms" },
-      { name: "Cargos", img: bottoms, link: "/bottoms" },
-      { name: "Joggers", img: bottoms, link: "/bottoms" },
+      { name: "Jeans", img: bottoms, link: "/shop" },
+      { name: "Cargos", img: bottoms, link: "/shop" },
+      { name: "Joggers", img: bottoms, link: "/shop" },
     ],
     hoodies: [
-      { name: "Zip Hoodies", img: hoodies, link: "/hoodies" },
-      { name: "Pullover", img: hoodies, link: "/hoodies" },
+      { name: "Zip Hoodies", img: hoodies, link: "/shop" },
+      { name: "Pullover", img: hoodies, link: "/shop" },
     ],
   };
 
@@ -54,7 +54,7 @@ const CategoryBar = () => {
               ))}
             </div>
 
-            <Link to="/products" className="view-all-link">
+            <Link to="/shop" className="view-all-link">
               View All →
             </Link>
           </div>
