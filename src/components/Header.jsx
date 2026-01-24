@@ -49,8 +49,9 @@ function Header() {
 
   const handleToggle = (type) => {
     setActive(type);
-    navigate(type === "women" ? "/women" : "/men");
-    if (isMobile) setIsMobileMenuOpen(false);
+    if (!isMobileMenuOpen) {
+      navigate(type === "women" ? "/women" : "/men");
+    }
   };
 
   const handleMobileMenuToggle = () => {
@@ -250,24 +251,44 @@ function Header() {
                   </div>
 
                   <div className="submenu-grid">
-                    <div className="submenu-item">
+                    <div
+                      className="submenu-item"
+                      onClick={() => {
+                        navigate("/shop");
+                        setIsMobileMenuOpen(false);
+                        setMobileView("main");
+                      }}
+                    >
                       <img src={allimg} alt="all" />
                       <div>View All</div>
                     </div>
 
-                    <div className="submenu-item">
-                      <img src={image1} />
+                    <Link
+                      to="/shop"
+                      className="submenu-item"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <img src={image1} alt="Shirts" />
                       <div>Shirts</div>
-                    </div>
-                    <div className="submenu-item">
+                    </Link>
+
+                    <Link
+                      to="/shop"
+                      className="submenu-item"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       <img src={image2} alt="T-Shirts" />
                       <span>T-Shirts</span>
-                    </div>
+                    </Link>
 
-                    <div className="submenu-item">
+                    <Link
+                      to="/shop"
+                      className="submenu-item"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       <img src={image3} alt="Bottoms" />
                       <span>Bottoms</span>
-                    </div>
+                    </Link>
                   </div>
                 </>
               )}
